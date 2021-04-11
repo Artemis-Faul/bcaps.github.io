@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+    @media (max-width: 990px) {
+        padding-bottom: 15px;
+    }
+    .footer_title {
+        margin-bottom: 6px;
+        color: #9C9EA6;
+        font: 400 1rem 'Manrope', sans-serif;
+        img {
+            position: relative;
+            top: 7.5px;
+        }
+    }
+    .footer_text {
+        color: #9C9EA6;
+        font: 300 .75rem 'Manrope', sans-serif;
+    }
+}

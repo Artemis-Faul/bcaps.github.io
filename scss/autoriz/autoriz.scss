@@ -1,0 +1,255 @@
+.modal_section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal_wrap {
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow: hidden;
+        background: #FFF;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        border-radius: 16px;
+        padding-top: 48px;
+        @media (max-width: 1280px) {
+            padding-top: 32px;
+        }
+    }
+    .modal_thank {
+        max-width: 400px;
+    }
+    .modal_title {
+        font: bold 2rem 'Manrope', sans-serif;
+        margin-bottom: 10px;
+        color: #1C2E35;
+        display: block;
+        text-align: center;
+        @media (max-width: 990px) {
+            font: bold 1.375rem 'Manrope', sans-serif;
+            margin-bottom: 8px;
+        }
+    }
+    .modal_text {
+        text-align: center;
+        padding: 0 20px;
+        font: 500 1rem 'Manrope', sans-serif;
+        margin-bottom: 60px;
+        color: #1C2E35;
+        @media (max-width: 990px) {
+            margin-bottom: 30px;
+        }
+        br {
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+    }
+    .modal_sub_title {
+        margin-bottom: 50px;
+        text-align: center;
+        color: #1C2E35;
+        font: bold 1.75rem 'Montserrat', sans-serif;
+        @media (max-width: 990px) {
+            font: bold 1.375rem 'Manrope', sans-serif;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 355px) {
+            margin-bottom: 10px;
+        }
+        span {
+            color: #ED5B4E;
+        }
+    }
+    .modal_form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        width: 100%;
+        align-items: center;
+        @media (max-width: 576px) {
+            grid-gap: 35px;
+        }
+        @media (max-width: 355px) {
+            grid-gap: 25px;
+        }
+        .input_box {
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            @media (max-width: 576px) {
+                padding: 0 20px;
+            }
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 15px 5px;
+                appearance: none;
+                border: none;
+                outline: none;
+                font: 500 1rem 'Manrope', sans-serif;
+                border-bottom: 1px solid #C7CFCF;
+                color: #1C2E35;
+                &:focus {
+                    border-color: #ED5B4E;
+                }
+            }
+            svg {
+                position: absolute;
+                right: 20px;
+                bottom: 18px;
+                cursor: pointer;
+                z-index: 9;
+                &:hover {
+                    path {
+                        fill: #ED5B4E;
+                    }
+                }
+            }
+            .eye_active {
+                path {
+                    fill: #ED5B4E;
+                }
+            }
+        }
+        .modal_panel_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 380px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            @media (max-width: 576px) {
+                max-width: auto;
+                width: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+                flex-direction: column;
+            }
+            .forget {
+                text-decoration: none;
+                font: 700 1rem 'Manrope', sans-serif;
+                color: #919797;
+                @media (max-width: 576px) {
+                    margin-top: 25px;
+                }
+            }
+        }
+        .btn_send {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 16px;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(90.26deg, #EA495C -1.3%, #F37C35 100.96%);
+            border-radius: 0 0 14px 14px;
+            font: 600 1.125rem 'Manrope', sans-serif;
+            border: none;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    .thank_send {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(90.26deg, #EA495C -1.3%, #F37C35 100.96%);
+        border-radius: 0 0 14px 14px;
+        font: 600 1.125rem 'Manrope', sans-serif;
+        border: none;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        opacity: .6;
+        transition: .2s;
+        display: block;
+        text-decoration: none;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 35px;
+    color: #1C2E35;
+    font: 500 1rem 'Manrope', sans-serif;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+}
+
+.checkbox label::before {
+    height: 22px;
+    width: 22px;
+    border: 2px solid #ED5B4E;
+    border-radius: 3px;
+    left: 0px;
+    top: -2px;
+}
+
+.checkbox label::after {
+    height: 7px;
+    width: 14px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg);
+    left: 4.5px;
+    top: 4px;
+}
+
+.checkbox input[type="checkbox"]+label::after {
+    content: none;
+}
+
+.checkbox input[type="checkbox"]:checked+label::after {
+    content: "";
+}
+
+.checkbox input[type="checkbox"]:checked+label::before {
+    background: #ED5B4E;
+}
+
+.disabled {
+    opacity: .6;
+}
+
+.error_text {
+    position: absolute;
+    top: 105%;
+    display: none;
+    right: 0;
+    color: #DA0B20;
+    font: 400 .7rem 'Manrope', sans-serif;
+}
+
+.input_box_active {
+    input {
+        border-color: #DA0B20!important;
+    }
+    .error_text {
+        display: block;
+    }
+}
